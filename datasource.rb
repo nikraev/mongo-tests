@@ -1,3 +1,5 @@
+require_relative './config/datasoyrce.yaml'
+
 class DataSource
   def initialize(name)
     
@@ -34,5 +36,10 @@ protected
   
   def setRedisData
     
+  end
+  
+private
+  def getConfig
+     
   end
 end

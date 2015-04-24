@@ -1,0 +1,13 @@
+mongo:
+  host: 127.0.0.1
+  port: 27017
+  database: site
+#  username: 
+#  password: my_password
+#  host: mysql://127.0.0.1:3306
+
+memcache:
+  host: 127.0.0.1
+  port: 27017
+  database: sitecache
+  

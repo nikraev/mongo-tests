@@ -69,5 +69,5 @@ end
 #result = f1.findObjectbyName('Rose')
 #uts result.class
 
-f1 = Flowers.new('127.0.0.1',27017, 'site')
-puts f1.findObjectbyName('Rose').class
+#f1 = Flowers.new('127.0.0.1',27017, 'site')
+#puts f1.findObjectbyName('Rose').class
