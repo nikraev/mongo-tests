@@ -14,12 +14,14 @@ class MongoData
   
   def saveObject(doc)
      @connect = self.getConnection
- #   puts "Connection refusing" if @connect.nil? 
+  
   end
   
-  def findObject()
+  def findObjectbyName(name)
+    
     @connect = self.getConnection
-        
+    result = @connect[:"#{@collection}"].find(:name => "#{name}")
+    result  
   end
 
 protected
@@ -57,8 +59,15 @@ class User < MongoData
 end
 
 
-f1 = Flowers.new('127.0.0.1',27017, 'site')
-f1.saveFlower('Rose')
+#f1 = Flowers.new('127.0.0.1',27017, 'site')
+#f1.saveObject('Rose',1000)
 
-u1 = User.new('127.0.0.1',27017, 'site')
-u1.saveObject("Kolia","nikraev@yandex.ru","1001")
+#u1 = User.new('127.0.0.1',27017, 'site')
+#u1.saveObject("Kolia","nikraev@yandex.ru","1001")
+
+#f1 = MongoData.new('127.0.0.1',27017, 'site')
+#result = f1.findObjectbyName('Rose')
+#uts result.class
+
+f1 = Flowers.new('127.0.0.1',27017, 'site')
+puts f1.findObjectbyName('Rose').class
